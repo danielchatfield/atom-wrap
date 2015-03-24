@@ -1,0 +1,14 @@
+{
+  "name": "wrap",
+  "main": "./lib/wrap",
+  "version": "0.0.0",
+  "description": "An Atom package that does wrapping right.",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/danielchatfield/wrap",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

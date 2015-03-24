@@ -1,0 +1,31 @@
+When current line goes over line boundary then insert new line at beginning of
+word (checking that word itself isn't greater than the line length).
+
+When words are deleted then reflow the current "paragraph" (loose term as
+different in different contexts). If sufficiently accurate then can make this
+automatic otherwise bound to keyboard shortcut.
+
+When overflow is part of comment then need to reflow comment section
+automatically.
+
+This asdasd asdasd asdkan dlaj dlasd is a tes alskd asl kdlasdla dlas dlsad
+jlakdsj alks dals dlas djlas dlas dl ad
+
+Only overflow in text/comment regions.
+
+Streaming:
+ - is range overflowing?
+ - is range at end of logical section (we don't want to reflow entire section
+   automatically)
+ - Seek back until beginning of word is found and then replace range with one
+   that includes new line (replacing entire range to ensure that event is fired
+   again if there are still overflows).
+
+gq:
+ - Get section buffer range.
+ - Search through buffer line by line: if underflow then make overflow by adding
+   next line until overflows.
+ - if overflow then "fix" overflow.
+ - replace part of section that changed.
+
+If gq is good enough then it can be enabled for streaming.
