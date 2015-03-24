@@ -5,7 +5,7 @@
   "description": "An Atom package that does wrapping right.",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/danielchatfield/wrap",
+  "repository": "https://github.com/danielchatfield/atom-wrap",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
